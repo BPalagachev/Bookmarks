@@ -1,0 +1,8 @@
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Models\obj\Debug\Bookmarks.Models.csprojResolveAssemblyReference.cache
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Models\bin\Debug\Bookmarks.Models.dll
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Models\bin\Debug\Bookmarks.Models.pdb
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Models\obj\Debug\Bookmarks.Models.dll
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Models\obj\Debug\Bookmarks.Models.pdb
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Models\bin\Debug\Bookmarks.Models.dll.config
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Models\bin\Debug\EntityFramework.dll
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Models\bin\Debug\EntityFramework.xml

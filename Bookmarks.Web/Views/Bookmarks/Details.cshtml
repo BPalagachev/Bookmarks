@@ -1,0 +1,46 @@
+﻿@model Bookmarks.Web.ViewModels.DisplayBookmarkViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="bookmarks-details-delete">
+    <fieldset>
+        <legend>Bookmark</legend>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Url)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Url)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Title)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Title)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.Description)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Description)
+        </div>
+
+        <div class="display-label">
+            @Html.DisplayNameFor(model => model.LastEdit)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.LastEdit)
+        </div>
+
+    </fieldset>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

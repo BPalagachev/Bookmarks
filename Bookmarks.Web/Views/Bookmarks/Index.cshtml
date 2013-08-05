@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Bookmarks.Web.ViewModels.DisplayBookmarkViewModel>
+
+@{
+    ViewBag.Title = "ViewTable";
+}
+
+<h2>Bookmarks</h2>
+
+<div class="bookmarks-container">
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+    <div class="bookmarks-create-form">
+        @using (Html.BeginForm("Index", "Bookmarks", FormMethod.Get))
+        {
+            <p>
+
+                Category:  @Html.DropDownList("categoryName", ViewData["Category"] as IEnumerable<SelectListItem>, string.Empty)
+                Title: @Html.TextBox("title", string.Empty)
+                Url: @Html.TextBox("url", string.Empty)
+                <br />
+                <input type="submit" value="Filter" />
+            </p>
+        }
+    </div>
+
+    <table class="bookmarksTable detailed">
+        <tr>
+            <th class="cell-detailed-col1"></th>
+            <th class="cell-detailed-col2">
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th class="cell-detailed-col3">
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th class="cell-detailed-col4">
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th class="cell-detailed-col5">Controls
+            </th>
+        </tr>
+
+        @{int counter = 0;}
+        @foreach (var item in Model)
+        {
+            counter++;
+            <tr>
+                <td class="cell-detailed-col1">
+                    @counter
+                </td>
+                <td class="cell-detailed-col2">
+                    <span class="cell-wrapper"><a href="@item.Url" target="_blank">@item.Title</a></span>
+                </td>
+                <td class="cell-detailed-col3" style="text-overflow:ellipsis;">
+                   <span class="cell-wrapper">@Html.DisplayFor(modelItem => item.Description)</span>
+                </td>
+                <td class="cell-detailed-col4">
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td class="cell-detailed-col5">
+                    <div class="bookmarks-controls">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

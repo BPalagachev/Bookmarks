@@ -1,0 +1,12 @@
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\Bookmarks.Data.dll
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\Bookmarks.Data.pdb
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\obj\Debug\Bookmarks.Data.csprojResolveAssemblyReference.cache
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\obj\Debug\Bookmarks.Data.dll
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\obj\Debug\Bookmarks.Data.pdb
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\Bookmarks.Data.dll.config
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\Bookmarks.Models.dll
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\EntityFramework.dll
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\Bookmarks.Models.pdb
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\EntityFramework.xml
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\obj\Debug\Bookmarks.Data.Migrations.Initial.resources
+E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\obj\Debug\Bookmarks.Data.csproj.GenerateResource.Cache

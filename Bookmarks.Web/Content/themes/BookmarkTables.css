@@ -1,0 +1,112 @@
+﻿/*Bookmarks filter table*/
+.bookmarks-container {
+    margin: 0 auto;
+}
+
+.bookmarksTable {
+    table-layout: fixed;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+    .bookmarksTable td {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .bookmarksTable th {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .bookmarksTable td {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .bookmarksTable tr {
+        height: 1rem;
+    }
+
+.bookmarks-controls {
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.cell-detailed-col1 {
+    width: 3%;
+}
+
+.cell-detailed-col2 {
+    width: 30%;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cell-detailed-col3 {
+    width: 35%;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cell-detailed-col4 {
+    width: 9%;
+}
+
+.cell-detailed-col5 {
+    width: 15%;
+}
+
+
+/*Search Filter*/
+.bookmarks-create-form {
+    width: 100%;
+}
+
+#categoryName {
+    width: 15%;
+}
+
+#title {
+    width: 25%;
+}
+
+#url {
+    width: 25%;
+}
+
+/*Bookmarks edit/craete*/
+.bookmarks-create-edit form{
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.editor-field select{
+    width: 350px;
+}
+
+.editor-field textarea{
+    width: 350px;
+}
+
+.bookmarks-create-edit input {
+    width: 350px;
+}
+
+/*Bookmarks Delete-Details*/
+
+
+
+
+

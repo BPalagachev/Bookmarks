@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Bookmarks.Web.ViewModels.DisplayBookmarkViewModel>
+
+@{
+    ViewBag.Title = "ViewTable";
+}
+
+<h2>Category: @ViewBag.CategoryName</h2>
+
+<div class="bookmarks-container">
+    <table class="bookmarksTable simple">
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+
+        @{int counter = 0;}
+        @foreach (var item in Model)
+        {
+            counter++;
+            <tr>
+                <td>
+                    @counter
+                </td>
+                <td>
+                    <a href="@item.Url" target="_blank">@item.Title</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a href="/Bookmarks/Edit/@item.Id">Edit</a>
+                    <a href="/Bookmarks/Details/@item.Id">Details</a>
+                    <a href="/Bookmarks/Delete/@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
