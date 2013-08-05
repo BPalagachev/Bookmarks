@@ -27,7 +27,6 @@ namespace Bookmarks.Web.ViewModels
 
         [MaxLength(100, ErrorMessage="Title length cannot exceed 100 symbols")]
         [MinLength(3, ErrorMessage="Title length cannot be less then 100 symbols")]
-        [Required]
         public string Title { get; set; }
 
         [MaxLength(300)]

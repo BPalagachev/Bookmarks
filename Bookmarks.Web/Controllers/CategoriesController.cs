@@ -66,7 +66,7 @@ namespace Bookmarks.Web.Controllers
         public ActionResult Create(Category category)
         {
             var existing = db.Categories.Where(x=>x.Id == category.Id).FirstOrDefault();
-
+            
             if (existing != null)
             {
                 existing.IsDeleted = false;

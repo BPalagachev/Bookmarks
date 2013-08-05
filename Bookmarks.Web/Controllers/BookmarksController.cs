@@ -103,6 +103,10 @@ namespace Bookmarks.Web.Controllers
         [ValidateAntiForgeryToken, InitializeSimpleMembership]
         public ActionResult Create(ManageBookmarkDataViewModel bookmarkModel)
         {
+            if (string.IsNullOrEmpty(bookmarkModel.Title))
+            {
+                bookmarkModel.Title = bookmarkModel.Url;
+            }
             var user = GetUser();
             var existing = db.Bookmarks.Where(x => x.Url == bookmarkModel.Url).FirstOrDefault();
             if (existing != null)
@@ -178,6 +182,11 @@ namespace Bookmarks.Web.Controllers
         [ValidateAntiForgeryToken, Authorize]
         public ActionResult Edit(ManageBookmarkDataViewModel bookmarkModel)
         {
+            if (string.IsNullOrEmpty(bookmarkModel.Title))
+            {
+                bookmarkModel.Title = bookmarkModel.Url;
+            }
+
             var user = GetUser();
             var existing = db.Bookmarks.Where(x => x.Url == bookmarkModel.Url).FirstOrDefault();
             if (existing != null)
