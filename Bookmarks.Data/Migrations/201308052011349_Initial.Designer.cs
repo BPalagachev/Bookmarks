@@ -11,7 +11,7 @@ namespace Bookmarks.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201308051905201_Initial"; }
+            get { return "201308052011349_Initial"; }
         }
         
         string IMigrationMetadata.Source

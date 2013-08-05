@@ -2,7 +2,7 @@ namespace Bookmarks.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class Initial : DbMigration
     {
         public override void Up()
@@ -15,7 +15,7 @@ namespace Bookmarks.Data.Migrations
                         UserName = c.String(),
                     })
                 .PrimaryKey(t => t.UserId);
-            
+
             CreateTable(
                 "dbo.Bookmarks",
                 c => new
@@ -35,9 +35,9 @@ namespace Bookmarks.Data.Migrations
                 .ForeignKey("dbo.Categories", t => t.Category_Id)
                 .Index(t => t.User_UserId)
                 .Index(t => t.Category_Id)
-                .Index(t=>t.Title)
-                .Index(t=>t.Url);
-            
+                .Index(t => t.Title)
+                .Index(t => t.Url);
+
             CreateTable(
                 "dbo.Categories",
                 c => new
@@ -47,11 +47,11 @@ namespace Bookmarks.Data.Migrations
                         IsDeleted = c.Boolean(nullable: false),
                         User_UserId = c.Int(),
                     })
+                    .Index(t => t.Name, unique: true)
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.UserProfile", t => t.User_UserId)
-                .Index(t => t.User_UserId)
-                .Index(t => t.Name, unique:true);
-            
+                .Index(t => t.User_UserId);
+
             CreateTable(
                 "dbo.Tags",
                 c => new
@@ -60,7 +60,7 @@ namespace Bookmarks.Data.Migrations
                         Name = c.String(maxLength: 75),
                     })
                 .PrimaryKey(t => t.Id);
-            
+
             CreateTable(
                 "dbo.TagBookmarks",
                 c => new
@@ -73,9 +73,9 @@ namespace Bookmarks.Data.Migrations
                 .ForeignKey("dbo.Bookmarks", t => t.Bookmark_Id, cascadeDelete: true)
                 .Index(t => t.Tag_Id)
                 .Index(t => t.Bookmark_Id);
-            
+
         }
-        
+
         public override void Down()
         {
             DropIndex("dbo.TagBookmarks", new[] { "Bookmark_Id" });
