@@ -5,13 +5,13 @@ namespace Bookmarks.Data.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class Initial : IMigrationMetadata
+    public sealed partial class CategoryName : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CategoryName));
         
         string IMigrationMetadata.Id
         {
-            get { return "201308052011349_Initial"; }
+            get { return "201308060915157_CategoryName"; }
         }
         
         string IMigrationMetadata.Source

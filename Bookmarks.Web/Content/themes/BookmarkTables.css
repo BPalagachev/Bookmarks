@@ -62,6 +62,9 @@
 
 .cell-detailed-col4 {
     width: 9%;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .cell-detailed-col5 {

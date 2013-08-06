@@ -65,7 +65,7 @@ namespace Bookmarks.Web.Controllers
         [ValidateAntiForgeryToken, InitializeSimpleMembership]
         public ActionResult Create(Category category)
         {
-            var existing = db.Categories.Where(x=>x.Id == category.Id).FirstOrDefault();
+            var existing = db.Categories.Where(x=>x.Name== category.Name).FirstOrDefault();
             
             if (existing != null)
             {

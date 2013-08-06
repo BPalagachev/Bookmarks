@@ -45,9 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookmarksContext.cs" />
-    <Compile Include="Migrations\201308052011349_Initial.cs" />
-    <Compile Include="Migrations\201308052011349_Initial.Designer.cs">
-      <DependentUpon>201308052011349_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201308060915157_CategoryName.cs" />
+    <Compile Include="Migrations\201308060915157_CategoryName.Designer.cs">
+      <DependentUpon>201308060915157_CategoryName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,8 +64,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201308052011349_Initial.resx">
-      <DependentUpon>201308052011349_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201308060915157_CategoryName.resx">
+      <DependentUpon>201308060915157_CategoryName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
