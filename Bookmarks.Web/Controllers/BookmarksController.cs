@@ -108,7 +108,7 @@ namespace Bookmarks.Web.Controllers
                 bookmarkModel.Title = bookmarkModel.Url;
             }
             var user = GetUser();
-            var existing = db.Bookmarks.Where(x => x.Url == bookmarkModel.Url).FirstOrDefault();
+            var existing = db.Bookmarks.Where(x => x.Url == bookmarkModel.Url &&x.User.UserId == user.UserId).FirstOrDefault();
             if (existing != null)
             {
                 if (ModelState.IsValid && existing.User.UserId == user.UserId)

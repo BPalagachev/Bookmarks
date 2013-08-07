@@ -13,6 +13,8 @@ namespace Bookmarks.Data.Migrations
         
         public override void Down()
         {
+            DropIndex("dbo.Categories", "IX_Name");
+            CreateIndex("dbo.Categories", "Name", unique:true);
         }
     }
 }
