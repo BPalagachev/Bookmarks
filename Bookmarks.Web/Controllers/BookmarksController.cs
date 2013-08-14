@@ -108,7 +108,7 @@ namespace Bookmarks.Web.Controllers
                 bookmarkModel.Title = bookmarkModel.Url;
             }
             var user = GetUser();
-            var existing = db.Bookmarks.Where(x => x.Url == bookmarkModel.Url &&x.User.UserId == user.UserId).FirstOrDefault();
+            var existing = db.Bookmarks.Where(x => x.Url == bookmarkModel.Url && x.User.UserId == user.UserId).FirstOrDefault();
             if (existing != null)
             {
                 if (ModelState.IsValid && existing.User.UserId == user.UserId)
@@ -154,14 +154,6 @@ namespace Bookmarks.Web.Controllers
                 return HttpNotFound();
             }
 
-            var user = GetUser();
-            var userCategories = db.Categories
-                .Where(x => x.User.UserId == user.UserId && !x.IsDeleted)
-                .Select(x => x.Name)
-                .ToList();
-
-            ViewData["Category"] = new SelectList(userCategories);
-
             ManageBookmarkDataViewModel model = new ManageBookmarkDataViewModel()
             {
                 Id = bookmark.Id,
@@ -170,6 +162,19 @@ namespace Bookmarks.Web.Controllers
                 Url = bookmark.Url,
                 Category = bookmark.Category.Name
             };
+
+            var user = GetUser();
+            var userCategories = db.Categories
+                .Where(x => x.User.UserId == user.UserId && !x.IsDeleted)
+                .Select(x => new SelectListItem
+                {
+                    Text = x.Name,
+                    Value =x.Name,
+                    Selected = x.Id==bookmark.Category.Id,
+                })
+                .ToList();
+
+            ViewData["Category"] = userCategories;
 
             return View(model);
         }
@@ -188,7 +193,10 @@ namespace Bookmarks.Web.Controllers
             }
 
             var user = GetUser();
-            var existing = db.Bookmarks.Where(x => x.Url == bookmarkModel.Url).FirstOrDefault();
+            var existing = db.Bookmarks
+                .Where(x => x.Id == bookmarkModel.Id && x.User.UserId == user.UserId)
+                .FirstOrDefault();
+
             if (existing != null)
             {
                 if (ModelState.IsValid && existing.User.UserId == user.UserId)
@@ -197,6 +205,7 @@ namespace Bookmarks.Web.Controllers
                     existing.LastEdit = DateTime.Now;
                     existing.Title = bookmarkModel.Title;
                     existing.Url = bookmarkModel.Url;
+                    existing.Description = bookmarkModel.Description;
                     existing.Category = LoadOrCreateCategory(bookmarkModel.Category);
                 }
             }

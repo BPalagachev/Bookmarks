@@ -8,5 +8,3 @@ E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\Bookmarks.M
 E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\EntityFramework.dll
 E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\Bookmarks.Models.pdb
 E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\bin\Debug\EntityFramework.xml
-E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\obj\Debug\Bookmarks.Data.Migrations.CategoryName.resources
-E:\programming\exercise\AspNetMvs\Bookmarks\Bookmarks.Data\obj\Debug\Bookmarks.Data.csproj.GenerateResource.Cache

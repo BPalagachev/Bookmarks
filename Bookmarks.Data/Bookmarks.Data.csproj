@@ -45,10 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BookmarksContext.cs" />
-    <Compile Include="Migrations\201308060915157_CategoryName.cs" />
-    <Compile Include="Migrations\201308060915157_CategoryName.Designer.cs">
-      <DependentUpon>201308060915157_CategoryName.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsersContext.cs" />
@@ -62,11 +58,6 @@
       <Project>{e4081489-6dcf-46d6-9a91-09ab5437dbff}</Project>
       <Name>Bookmarks.Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201308060915157_CategoryName.resx">
-      <DependentUpon>201308060915157_CategoryName.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
